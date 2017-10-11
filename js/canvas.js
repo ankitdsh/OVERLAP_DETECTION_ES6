@@ -18,7 +18,7 @@ class Canvas {
     }
 
     mount() {
-        $body.appendChild(this.canvas)
+        $body.prepend(this.canvas)
     }
 
     addRect(rect) {
