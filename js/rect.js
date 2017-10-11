@@ -28,7 +28,7 @@ export default class Rectangle {
         return true
     }
 
-    shadeIntersectRect(rect, canvas,shadeColor = "yellow") {
+    shadeIntersectRect(rect, canvas, shadeColor = "yellow") {
         canvas.context.fillStyle = shadeColor
 
         let x1 = Math.max(rect.x1, this.x1)

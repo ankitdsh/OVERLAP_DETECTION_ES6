@@ -3,8 +3,8 @@ import Canvas from './canvas.js'
 
 try {
 
-	let $total_area = document.querySelector('#totalArea')
-	let $intersect_area = document.querySelector('#intersectArea')
+    let $total_area = document.querySelector('#totalArea')
+    let $intersect_area = document.querySelector('#intersectArea')
 
     window.requestAnimFrame = (function() {
         return window.requestAnimationFrame ||
@@ -25,8 +25,8 @@ try {
 
     const COLOR_GREEN = 'rgba(0,255,0,0.7)'
     const COLOR_BLUE = 'rgba(0,0,255,0.7)'
-    const  COLOR_RED= 'rgba(255,0,0,0.7)'
-    const  COLOR_YELLOW= 'rgba(255,255,0,0.9)'
+    const COLOR_RED = 'rgba(255,0,0,0.7)'
+    const COLOR_YELLOW = 'rgba(255,255,0,0.9)'
 
     let canvas = new Canvas(800, 600, 'aqua', '#000f00')
 
@@ -47,18 +47,16 @@ try {
 
             rect1.addFillColor(COLOR_RED)
             rect2.addFillColor(COLOR_RED)
-            rect1.shadeIntersectRect(rect2,canvas,COLOR_YELLOW)
-            intersectArea =  rect1.getIntersectArea(rect2)
-            
+            rect1.shadeIntersectRect(rect2, canvas, COLOR_YELLOW)
+            intersectArea = rect1.getIntersectArea(rect2)
 
         } else {
             rect1.addFillColor(COLOR_GREEN)
             rect2.addFillColor(COLOR_BLUE)
         }
 
-
-        $total_area.innerText  = rect1Area + rect2Area - intersectArea
-        $intersect_area.innerText  = intersectArea
+        $total_area.innerText = rect1Area + rect2Area - intersectArea
+        $intersect_area.innerText = intersectArea
 
     }
 
